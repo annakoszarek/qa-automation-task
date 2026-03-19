@@ -1,13 +1,14 @@
 import http from 'k6/http';
 import { sleep, check } from 'k6';
 import { Counter } from 'k6/metrics';
+import { env } from 'node:process';
 
 export const options = {
   vus: 10,
   duration: '1m',
 };
 
-const API_KEY = 'reqres_049cb211d12c43e69373434998024ec2';
+const API_KEY = env.API_KEY;
 const status200 = new Counter('status_200');
 const status400 = new Counter('status_400');
 const status401 = new Counter('status_401');
