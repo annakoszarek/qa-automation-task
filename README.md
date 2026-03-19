@@ -64,7 +64,7 @@ Performance tests are implemented using k6.
 
 ### Run the test:
 
-API_KEY=your_api_key k6 run performance/users-load.js
+k6 run performance/users-load.js
 
 #### For detailed performance analysis and results, see:
 
@@ -74,6 +74,7 @@ performance/report.md
 
 * Focused on required scenarios instead of broad coverage
 * Prioritized readability and maintainability over framework complexity
+* A lightweight login fixture is used for the standard user
 * Selected k6 for simplicity and built-in performance metrics
 
 ## Trade-offs and Limitations
